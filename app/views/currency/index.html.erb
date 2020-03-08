@@ -1,0 +1,14 @@
+<table align="center" width="100%">
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Rate</th>
+	</tr>
+	<% Currency.all.each do |c| %>
+		<tr>
+			<td><%= c.id %></td>
+			<td><%= c.name %></td>
+			<td><%= c.rate %></td>
+		</tr>
+	<% end %>
+</table>
