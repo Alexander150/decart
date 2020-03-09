@@ -1,12 +1,13 @@
 require "rails_helper"
 
-describe CurrencyController do
-  before(:all) do
-    @currency = Currency.new(name: "Доллар", rate: "12,34")
+describe Currency do
+
+  describe "GET currencies#currencies" do
+  	it "should list names and rates of all currencies"
   end
 
-  it 'has a name and a rate' do
-    @currency.currencies.empty?.should false
-    # @currency.rate.empty?.should be_false
+  describe "GET currencies#currency" do
+  	it "should list name and rate of 1 currency, find by id"
   end
+
 end
