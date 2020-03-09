@@ -1,14 +1,23 @@
-<table align="center" width="100%">
-	<tr>
-		<th>Id</th>
-		<th>Name</th>
-		<th>Rate</th>
-	</tr>
-	<% Currency.all.each do |c| %>
-		<tr>
-			<td><%= c.id %></td>
-			<td><%= c.name %></td>
-			<td><%= c.rate %></td>
-		</tr>
-	<% end %>
-</table>
+<header class="header" style="width: 50%;">
+	<div>
+		<h1 style="text-align: center;">Стартовая страница</h1>
+	</div>
+</header>
+<body ng-controller="ModalCtrl" ng-init="">
+	Вы хотите <a href="all" class="redirect"><b>простотреть информацию о всех валютах</b></a> или <a href="#" ng-click="openSearch();" class="redirect"><b>воспользоваться поиском</b></a>?
+
+	<div class="modal">
+		<div class="close" ng-click="closeSearch();">
+			X
+		</div>
+		<div style="margin-top: 5%;">
+			<select id="currency">
+				<option disabled selected>Выберите название валюты</option>
+				<% Currency.all.each do |c| %>
+					<option><%= c.name %></option>
+				<% end %>
+			</select>
+			<button ng-click="send();">Найти</button>
+		</div>
+	</div>
+</body>

@@ -1,13 +1,17 @@
 class CurrencyController < ApplicationController
 
-	def currencies
+	def get_currencies
     	@currencies = Currency.all
-		render json: @currencies
+		render json: {currencies: @currencies}
   	end
 
-  	def currency
+  	def all
+  		@currencies = Currency.all
+  	end
+
+  	def get_currency
     	@currency = Currency.find(params[:currency_id])
-    	render json: @currency
+    	render json: {currency: @currency}
   	end
 
 end

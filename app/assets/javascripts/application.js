@@ -10,7 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require activestorage
-//= require turbolinks
-//= require_tree .
+
+//= require 'app-vendor/jquery.js'
+//= require 'app-vendor/angular.js'
+
+//= require 'app-angular/app-0-main/app-0-app-itself.js'
+//= require 'app-angular/app-1-modal/app-1-modal-ctrl.js'
+//= require 'app-angular/app-2-currencies/app-2-currencies-ctrl.js'

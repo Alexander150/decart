@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   # resources :currency
   root to: "currency#index", as: :root
 
-  get '/currencies', to: 'currency#currencies', as: :currencies
-  get '/currencies/:currency_id', to: 'currency#currency', as: :currency
+  get "/all", to: "currency#all", as: :all
+
+  get '/currencies', to: 'currency#get_currencies', as: :get_currencies
+  get '/currencies/:currency_id', to: 'currency#get_currency', as: :get_currency
 end

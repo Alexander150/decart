@@ -1,0 +1,22 @@
+<header class="header" style="width: 50vw;">
+	<div>
+		<h1 style="text-align: center;">Все котировки представлены здесь</h1>
+	</div>
+</header>
+<body ng-controller="CurrenciesCtrl" ng-init="getCurrencies();">
+	<table align="center" width="100%">
+		<tr>
+			<th>Id</th>
+			<th>Название валюты</th>
+			<th>Курс валюты к рублю</th>
+			<th>Переход к котировке</th>
+		</tr>
+		<tr ng-repeat="currency in currencies">
+			<td>{{ currency.id }}</td>
+			<td>{{ currency.name }}</td>
+			<td>{{ currency.rate }}</td>
+			<td><a href="/currencies/{{ currency.id }}">Перейти к котировке</a></td>
+		</tr>
+
+	</table>
+</body>
