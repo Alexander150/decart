@@ -6,7 +6,9 @@ class CurrencyController < ApplicationController
   	end
 
   	def all
-  		@currencies = Currency.all
+  	end
+
+  	def show
   	end
 
   	def get_currency

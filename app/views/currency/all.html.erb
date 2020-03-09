@@ -1,10 +1,11 @@
-<header class="header" style="width: 50vw;">
-	<div>
-		<h1 style="text-align: center;">Все котировки представлены здесь</h1>
-	</div>
-</header>
 <body ng-controller="CurrenciesCtrl" ng-init="getCurrencies();">
-	<table align="center" width="100%">
+	<header class="header" style="width: 50vw;">
+		<div>
+			<h1 style="text-align: center;">Все котировки представлены здесь</h1>
+		</div>
+	</header>
+	<b>Время обновления информации: {{ time.getHours() }}:{{ time.getMinutes() }}</b>
+	<table align="center" width="80%">
 		<tr>
 			<th>Id</th>
 			<th>Название валюты</th>
@@ -15,8 +16,10 @@
 			<td>{{ currency.id }}</td>
 			<td>{{ currency.name }}</td>
 			<td>{{ currency.rate }}</td>
-			<td><a href="/currencies/{{ currency.id }}">Перейти к котировке</a></td>
+			<td><a href="/show/{{ currency.id }}" style="color: black;"><b>Перейти к котировке</b></a></td>
 		</tr>
 
 	</table>
+
+	<a href="/" style="text-decoration: none; color: black; position: fixed; left: 25px; bottom: 25px;"><b>Стартовая<br>страница</b></a>
 </body>

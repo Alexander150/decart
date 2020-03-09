@@ -17,3 +17,4 @@
 //= require 'app-angular/app-0-main/app-0-app-itself.js'
 //= require 'app-angular/app-1-modal/app-1-modal-ctrl.js'
 //= require 'app-angular/app-2-currencies/app-2-currencies-ctrl.js'
+//= require 'app-angular/app-3-currency/app-3-currency-ctrl.js'
