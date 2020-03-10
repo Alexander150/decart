@@ -15,6 +15,8 @@ gem 'thin'
 
 # HTML parsing
 gem 'nokogiri'
+gem 'jwt'
+gem 'bcrypt'
 
 group :assets do
   gem 'sass-rails',   '~> 5.0'
