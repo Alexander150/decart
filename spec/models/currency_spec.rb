@@ -18,4 +18,5 @@ describe Currency do
   	@currency.get_rate.should eq "12,34"
   end
 
+
 end
